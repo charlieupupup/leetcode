@@ -20,10 +20,10 @@ class Solution {
         while (lo < hi) {
             int m1 = lo + (hi - lo) / 2;
             int m2 = m1 + 1;
-            if (nums[m1] < nums[m2]) {
-                lo = m1 + 1;
+            if (nums[m1] > nums[m2]) {
+                hi = m1;
             } else {
-                hi = m2 - 1;
+                lo = m2;
             }
         }
         return lo;
